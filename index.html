@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La Zi · Automatizări de back-office pentru IMM-uri</title>
+<meta name="description" content="Legăm comenzile, facturile, banca și contabilul între ele și avem grijă să meargă în fiecare zi. Pentru magazine online și firme cu 200–5.000 de documente pe lună.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Nunito:wght@400;600;700&display=swap">
+<style>
+:root{--bg:#fbf5ea;--fg:#2b2320;--muted:#6e615a;--accent:#d9641e;--accent-2:#1f6f5c;--card:#fff;--line:#e8dccb}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--fg);font-family:"Nunito",system-ui,sans-serif;line-height:1.5;font-size:16px}
+h1,h2,h3,p{margin:0}
+h1,h2,h3{text-wrap:balance}
+.wrap{max-width:1040px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.brand{display:flex;align-items:center;gap:10px;padding-block:22px;font:700 20px "Fraunces",Georgia,serif}
+.brand svg{width:34px;height:34px}
+.hero{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center;padding-block:32px 56px}
+h1{font:500 clamp(34px,5vw,56px)/1.08 "Fraunces",Georgia,serif;letter-spacing:-.01em}
+h1 em{font-style:italic;color:var(--accent)}
+.lead{font-size:18px;color:var(--muted);margin-top:18px;max-width:38rem}
+.cta{display:inline-flex;gap:8px;align-items:center;margin-top:26px;background:var(--accent);color:#fff;padding:14px 22px;border-radius:999px;font-weight:700;text-decoration:none}
+.cta:focus-visible,a:focus-visible{outline:3px solid var(--accent-2);outline-offset:3px}
+.cta-note{display:block;margin-top:10px;font-size:14px;color:var(--muted)}
+.pipe{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:22px}
+.pipe ol{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.pipe li{display:flex;gap:12px;align-items:center;font-weight:600}
+.pipe li span{width:30px;height:30px;border-radius:50%;background:var(--bg);border:2px solid var(--accent-2);display:grid;place-items:center;font-size:13px;color:var(--accent-2);flex:none}
+.pipe .ok{margin-top:14px;font-size:13px;color:var(--accent-2);font-weight:700}
+h2{font:500 clamp(26px,3.4vw,36px)/1.15 "Fraunces",Georgia,serif;margin-bottom:22px}
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;padding-block:20px 56px}
+.three article{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px}
+.three h3{font:700 19px "Fraunces",Georgia,serif;margin-bottom:8px}
+.three p{color:var(--muted);font-size:15px}
+.three .price{display:inline-block;margin-top:14px;background:var(--bg);padding:4px 10px;border-radius:8px;font-weight:700;font-size:14px}
+.band{background:var(--accent-2);color:#f3f8f5;padding-block:48px}
+.band .wrap{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.band h2{color:#fff}
+.band p{margin-top:10px}
+.band ul{margin:0;padding-left:18px;display:grid;gap:8px}
+.foot{padding-block:40px 28px;display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:space-between;align-items:center;color:var(--muted);font-size:15px}
+.foot b{color:var(--fg)}
+.foot a{color:var(--fg);text-decoration:none;font-weight:600}
+.legal{font-size:13px;color:var(--muted);padding-bottom:28px}
+@media (max-width:760px){.hero,.three,.band .wrap{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="wrap">
+  <div class="brand">
+    <svg viewBox="0 0 34 34" aria-hidden="true"><rect x="4" y="7" width="26" height="23" rx="5" fill="none" stroke="#d9641e" stroke-width="3.5"/><path d="M4 14h26" stroke="#d9641e" stroke-width="3.5"/><path d="M11 3v7M23 3v7" stroke="#d9641e" stroke-width="3.5" stroke-linecap="round"/><path d="M11.5 21.5l4 4 7-7.5" fill="none" stroke="#1f6f5c" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    La Zi
+  </div>
+</header>
+
+<main>
+  <section class="wrap hero">
+    <div>
+      <h1>Comenzile, facturile, banca și contabilul, <em>legate între ele.</em> Și cineva care are grijă să meargă zilnic.</h1>
+      <p class="lead">Pentru magazine online și firme cu 200–5.000 de documente pe lună și 2–4 sisteme care trebuie să lucreze împreună. Le legăm de la zero sau le preluăm pe cele existente: monitorizare, actualizări, îmbunătățiri și extindere spre alte fluxuri, la nevoie.</p>
+      <a class="cta" href="#contact">Hartă gratuită a fluxului, 30 min →</a>
+      <span class="cta-note">Dacă nu găsim cel puțin 5 ore pe lună de economisit, nu vă propunem nimic.</span>
+    </div>
+    <div class="pipe">
+      <ol>
+        <li><span>1</span>Comandă din shop sau eMAG</li>
+        <li><span>2</span>Factură în SmartBill / Oblio</li>
+        <li><span>3</span>Trimisă în e-Factura (ANAF)</li>
+        <li><span>4</span>AWB generat la curier</li>
+        <li><span>5</span>Status actualizat pe eMAG</li>
+        <li><span>6</span>Copie în dosarul contabilului</li>
+      </ol>
+      <p class="ok">✓ Automat, verificat în fiecare dimineață</p>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <h2>Ce primiți, concret</h2>
+    <div class="three">
+      <article><h3>Fluxul construit</h3><p>Uneltele pe care le aveți deja, legate cap la cap. Construit o dată, plătit o dată.</p><span class="price">800–1.800 € o singură dată</span></article>
+      <article><h3>Monitorizare și reparații</h3><p>API-urile se schimbă, tokenul SPV expiră, un cod de TVA e greșit. Primim alerta și reparăm, înainte să observați.</p><span class="price">99–499 € / lună</span></article>
+      <article><h3>Un om responsabil</h3><p>Când contabilul nu găsește facturile din martie sau eMAG semnalează o livrare întârziată, ne sunați pe noi, nu suportul unui plugin.</p><span class="price">Inclus în abonament</span></article>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div><h2>Nu facem contabilitate.</h2><p>Contabilul dumneavoastră înregistrează și depune în continuare. Noi ne asigurăm că primește documentele complete și la timp, fără să le ceară.</p></div>
+      <ul>
+        <li>Facturi furnizori descărcate automat din SPV, extrase și trimise la aprobare pe WhatsApp</li>
+        <li>Extras bancar potrivit cu facturile, somații automate pentru întârzieri</li>
+        <li>Dosar lunar complet pentru contabil, inclusiv verificarea D300 vs P300</li>
+        <li>Sincronizare stoc eMAG ↔ shop ↔ facturare</li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap">
+  <div class="foot" id="contact">
+    <div><b>La Zi</b> · automatizări de back-office, un serviciu NN Data Insight</div>
+    <div><a href="mailto:office@datainsight.ro">office@datainsight.ro</a> · <a href="tel:+40757523575">0757 523 575</a></div>
+  </div>
+  <p class="legal">NN Data Insight S.R.L. · CUI RO44505790 · J2021003025122 · jud. Cluj</p>
+</footer>
+</body>
+</html>
